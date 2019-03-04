@@ -1,9 +1,77 @@
-# Project 1 @cmda-minor-web · 2018-2019
+<h1 align="center">Project 1 @cmda-minor-web · 2018-2019</h1>
 
-## Zoek in de de collectie van de OBA
+<p align="center"><b>A website for the OBA (Public Library Amsterdam) which only focuses on music</b>
+</p>
 
-Het project vindt plaats bij de Centrale OBA. Maandagochtend is om 10.00 uur de kickoff, vrijdag zijn de presentaties van de resultaten. In een week bouwt iedere student een eigen prototype dat bezoekers kan helpen om items uit de OBA collectie te vinden. Technieken geleerd bij [CSS to the Rescue](https://github.com/cmda-minor-web/css-to-the-rescue-1819) en [Web App from Scratch](https://github.com/cmda-minor-web/web-app-from-scratch-1819) worden toegepast bij het bouwen van de de prototypes.
+<br>
 
-We verzamelen maandagochtend om 09.45 op de 1e verdieping van de Centrale OBA, [Oosterdokskade 143](https://www.google.com/maps/place/OBA+library+of+Amsterdam/@52.3756983,4.9082087,15z/data=!4m2!3m1!1s0x0:0x6b97f693e6ecb494?ved=2ahUKEwioo6OrzubgAhWLNOwKHR6KDQgQ_BIwCnoECAYQCA).
+<p align="center">
+  <a href="https://github.com/Mennauu/project-1-1819/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="License">
+  </a>
+</p> 
 
+<br>
+
+![preview](preview.png)
+
+<br>
+
+<!-- ☝️ replace this description with a description of your own work -->
+## Introduction
+
+<!-- Maybe a table of contents here? 📚 -->
+## Table of Contents
+
+- [Installation](#installation)
+- [Data](#data)
+  - [Authentication and limit](#authentication-and-limit)
+  - [Featured data](#featured-data)
+  - [Retrieve](#retrieve)
+- [Checklist](#checklist)
+- [Credits](#credits)
+- [Sources](#sources)
+  - [API](#api)
+- [License](#license)
+
+<!-- How about a section that describes how to install this project? 🤓 -->
+## Installation
+1. Open your terminal
+2. Change the directory to a folder in which you want to place the files
+```bash
+cd /~path
+```
+3. Clone the repository (you're going to need [Git](https://www.linode.com/docs/development/version-control/how-to-install-git-on-linux-mac-and-windows/))
+```bash
+git clone https://github.com/Mennauu/project-1-1819.git
+```
+4. Load any [live server](https://www.npmjs.com/package/live-server) and serve index.html
+
+<!-- What external data source is featured in your project and what are its properties 🌠 -->
+## Data
+
+### Authentication and limit
+
+### Featured data
+
+### Retrieve
+
+<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
+## Checklist
+- [x] Think of a concept
+- [ ] Empty
+
+
+<!-- Maybe someone helped me 🤔-->
+## Credits
+
+<!-- Maybe I used some awesome sources that I can mention 🤔-->
+## Sources
+Underneath you will find all the sources that were previously mentioned throughout the document and some others which were helpful.
+
+### API
+
+<!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
+## License 
+See the [LICENSE file](https://github.com/Mennauu/web-app-from-scratch-18-19/blob/master/LICENSE) for license rights and limitations (MIT).
 
