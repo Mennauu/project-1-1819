@@ -35,9 +35,7 @@
 *::before,
 *::after {box-sizing: border-box;}
 
-*:focus {
-  outline: none;
-}
+*:focus {outline: none;}
 
 html {font-size: 16px;}
 
@@ -59,12 +57,15 @@ ul {
 
 main {padding: 0.5em}
 
-input {
-  font-size: 1rem;
-}
+input {font-size: 1rem; }
 input::placeholder {
   color: var(--gray);
   font-size: 0.8rem;
+}
+
+section {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /********************************
@@ -85,14 +86,12 @@ p {
 }
 
 a { 
-  color: var(--black);
-  text-decoration: none;
+  color: var(--white);
   cursor: pointer;
 }
 
 a:hover {
-  color: var(--white);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 small {font-size: 80%;}
@@ -127,13 +126,32 @@ small {font-size: 80%;}
 .response {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .subject {
   background-color: var(--gray);
-  padding: 1em;
   border-radius: var(--border-radius);
-  flex: 1 0 10%;
+  flex: 1 0 13%;
   margin: .5em;
   text-align: center;
+  position: relative;
+}
+
+.subject:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.subject span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
 }

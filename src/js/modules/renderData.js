@@ -3,16 +3,21 @@ import { removeChildren } from './utils.js'
 export const renderHome = (data) => {
   const title = document.querySelector('main > section > h1')
   const dataContainer = document.querySelector('.response')
-  const HTMLMarkup = `Luister je liever naar boeken? Bekijk onze collectie van Luisterboeken.`
+  const HTMLMarkup = `Ontdek luisterboeken bij de OBA`
 
   removeChildren(dataContainer)
 
+  title.textContent = ""
   title.insertAdjacentHTML('beforeend', HTMLMarkup)
+
+  console.log(data)
 
   data.map(object => {
     /* This is the HTML Markup that will be inserted */
     const HTMLMarkup =
-    `<a href="#${object}" class="subject">${object}</a>`
+      `<a href="#${object}" class="subject">
+        <span>${object}</span>
+       </a>`
 
     /* Insert markup to HTML section */
     dataContainer.insertAdjacentHTML('beforeend', HTMLMarkup)
@@ -22,9 +27,10 @@ export const renderHome = (data) => {
 export const renderSubject = (data) => {
   const title = document.querySelector('main > section > h1')
   const dataContainer = document.querySelector('.response')
-  const titleText = `${data.title}`
+  const HTMLMarkup = `${data.subject}`
 
-  removeChildren(dataContainer, title)
+  title.textContent = ""
+  removeChildren(dataContainer)
 
-  title.insertAdjacentHTML('beforeend', titleText)
+  title.insertAdjacentHTML('beforeend', HTMLMarkup)
 }

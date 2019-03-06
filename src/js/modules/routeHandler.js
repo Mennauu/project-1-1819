@@ -14,8 +14,8 @@ export const home = async () => {
 export const subject = async (name) => {
   // Get all data
   const data = await getObaData()
+  // Get only subject data based
   const object = subjectData(data, name)
-
   // Render data to HTML
   renderSubject(object)
 }
