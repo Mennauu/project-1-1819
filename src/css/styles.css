@@ -1,1 +1,139 @@
+/********************************
+***                           ***
+******      Stylesheet     ******
+***                           ***
+* Copyright (c) 2019 menno.work *
+*********************************/
 
+/********************************
+*      1. Custom properties     *
+*********************************/
+:root {
+  /* colors */
+ --white: #fff;
+ --light-gray: #f2f2f2;
+ --gray: #dcdcdc;
+ --dark-gray: #443F45;
+ --black: #212529;
+ --brown: #a0522d;
+ --red: #ff0000;
+ --blue: #0000FF;
+ --tomato: #e74c3c;
+ --roasted: #262626;
+
+ /* Fonts */
+ --font-nt-sans: "Nunito Sans", Calibri, sans-serif;
+
+ /* Style */
+ --border-radius: 5px;
+}
+
+/********************************
+*           2. Base             *
+*********************************/
+*,
+*::before,
+*::after {box-sizing: border-box;}
+
+*:focus {
+  outline: none;
+}
+
+html {font-size: 16px;}
+
+body {
+  margin: 0;
+  font-family: var(--font-nt-sans);
+  font-size: 1em;
+  line-height: calc(1.5em + (1.5 - 1.2) * ((100vw - 300px)/(1100 - 300)));
+  color: var(--black);
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+ }
+
+main {padding: 0.5em}
+
+input {
+  font-size: 1rem;
+}
+input::placeholder {
+  color: var(--gray);
+  font-size: 0.8rem;
+}
+
+/********************************
+*        3. Typography          *
+*********************************/
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-nt-sans);
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.3em;
+}
+
+h1 {font-size: calc(28px + (46 - 28) * ((100vw - 300px) / (1600 - 300)));}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+a { 
+  color: var(--black);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--white);
+  text-decoration: none;
+}
+
+small {font-size: 80%;}
+
+/********************************
+*         4. Top Header         *
+*********************************/
+[role="banner"] {
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+  padding: .5em;
+  display: flex;
+}
+
+[role="banner"] img {
+  max-height: 1.5em;
+  margin-right: 1em;
+}
+
+[role="banner"] input {
+  border: 0;
+  width: 100%;
+  position: relative;
+}
+
+[role="banner"] input:hover {
+  outline: 0;
+}
+
+/********************************
+*         4. Content            *
+*********************************/
+.response {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.subject {
+  background-color: var(--gray);
+  padding: 1em;
+  border-radius: var(--border-radius);
+  flex: 1 0 10%;
+  margin: .5em;
+  text-align: center;
+}
