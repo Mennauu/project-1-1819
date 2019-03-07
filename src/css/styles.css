@@ -12,7 +12,7 @@
   /* colors */
  --white: #fff;
  --light-gray: #f2f2f2;
- --gray: #dcdcdc;
+ --gray: #BEBEBE;
  --dark-gray: #443F45;
  --black: #212529;
  --brown: #a0522d;
@@ -78,7 +78,9 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.3em;
 }
 
-h1 {font-size: calc(28px + (46 - 28) * ((100vw - 300px) / (1600 - 300)));}
+h1 {
+  font-size: calc(28px + (46 - 28) * ((100vw - 300px) / (1600 - 300)));
+}
 
 p {
   margin-top: 0;
@@ -86,15 +88,26 @@ p {
 }
 
 a { 
-  color: var(--white);
+  color: var(--gray);
   cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+a:hover,
+a:hover span {text-decoration: underline;}
+a:hover img {
+  filter: brightness(65%);
+  transition: filter .5s;
 }
 
-a:hover {
-  text-decoration: underline;
+small {
+  font-size: 80%;
+  color: var(--gray);
+  min-height: 24px;
+  display: block;
+  margin-left: .5em;
+  margin-bottom: 1em;
 }
-
-small {font-size: 80%;}
 
 /********************************
 *         4. Top Header         *
@@ -123,10 +136,24 @@ small {font-size: 80%;}
 /********************************
 *         4. Content            *
 *********************************/
-.response {
+.response, 
+.loader {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+}
+
+.loader {
+  animation: breathing 5s ease-out infinite normal;
+}
+
+.loader-title {
+  height: 3.5em;
+  background-color: var(--dark-gray);
+  width: 60%;
+  margin: 1.5em 0 1.5em .5em;
+  animation: breathing 5s ease-out infinite normal;
+  border-radius: var(--border-radius);
 }
 
 .subject {
@@ -136,6 +163,7 @@ small {font-size: 80%;}
   margin: .5em;
   text-align: center;
   position: relative;
+  max-width: 284px;
 }
 
 .subject:before {
@@ -154,4 +182,25 @@ small {font-size: 80%;}
   align-items: center;
   justify-content: center;
   padding: 1em;
+  color: var(--white);
+}
+
+.subject img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: var(--border-radius);
+  filter: brightness(40%);
+  transition: filter .5s;
+}
+
+@keyframes breathing {
+  0% {transform: scale(0.98);}
+  25% {transform: scale(1);}
+  50% {transform: scale(0.98);}
+  75% {transform: scale(1);}
+  100% {transform: scale(0.98);}
 }

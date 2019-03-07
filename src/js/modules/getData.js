@@ -16,9 +16,9 @@ export const getObaData = async () => {
 
       for (const object of filteredData) {
         // Remove all objects with null's
-        if (object.title !== null && object.publication_year !== null && object.cover_image !== null && object.subject !== null)
-          /* Cache data */
-          addObject(object)
+        if (object.amount !== null && object.availableAmount !== null && object.author !== null && object.title !== null && object.publication_year !== null && object.cover_image !== null && object.subject !== null)
+        /* Cache data */
+        addObject(object)
       }
     }
     /* retrieve data from the cached data */
