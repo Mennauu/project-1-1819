@@ -15,9 +15,10 @@
  --gray: #BEBEBE;
  --dark-gray: #443F45;
  --black: #212529;
+ --green: #2ecc71;
  --brown: #a0522d;
- --red: #ff0000;
- --blue: #0000FF;
+ --red: #e74c3c;
+ --blue: #2c3e50;
  --tomato: #e74c3c;
  --roasted: #262626;
 
@@ -63,6 +64,7 @@ input::placeholder {
   font-size: 0.8rem;
 }
 
+hgroup,
 section {
   max-width: 1200px;
   margin: 0 auto;
@@ -78,9 +80,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.3em;
 }
 
-h1 {
-  font-size: calc(28px + (46 - 28) * ((100vw - 300px) / (1600 - 300)));
-}
+h1 {font-size: calc(28px + (46 - 28) * ((100vw - 300px) / (1600 - 300)));}
 
 p {
   margin-top: 0;
@@ -105,8 +105,16 @@ small {
   color: var(--gray);
   min-height: 24px;
   display: block;
-  margin-left: .5em;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 1em;
+  max-width: 1200px;
+  width: 100%;
+}
+
+span {
+  display: block;
+  width: 100%;
 }
 
 /********************************
@@ -136,7 +144,7 @@ small {
 /********************************
 *         4. Content            *
 *********************************/
-.response, 
+section:first-of-type, 
 .loader {
   display: flex;
   flex-wrap: wrap;
@@ -145,6 +153,8 @@ small {
 
 .loader {
   animation: breathing 5s ease-out infinite normal;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .loader-title {
@@ -183,6 +193,7 @@ small {
   justify-content: center;
   padding: 1em;
   color: var(--white);
+  border-radius: var(--border-radius);
 }
 
 .subject img {
@@ -193,10 +204,64 @@ small {
   top: 0;
   left: 0;
   border-radius: var(--border-radius);
-  filter: brightness(40%);
+  filter: grayscale(0.6) brightness(0.45) contrast(1.05);
   transition: filter .5s;
 }
 
+.green {box-shadow: 3.5px 3.5px 1px var(--green);}
+.red {box-shadow: 3.5px 3.5px 1px var(--red);}
+
+.green-text {color: var(--green);}
+.red-text {color: var(--red);}
+
+/* book detail page */
+.book {
+  background-color: var(--light-gray);
+  border-radius: var(--border-radius);
+  padding: 1em;
+  display: block!important;
+  overflow: auto;
+  position: relative;
+}
+
+.book small {
+  color: var(--dark-gray);
+  margin-bottom: 4em;
+}
+
+.book img { 
+  float: left; 
+  margin-right: 1em; 
+}
+
+.book p {font-style: italic;}
+
+.book h2 {margin: 0;}
+
+.book h3 {
+  color: var(--dark-gray);
+  font-size: 1.06em;
+  margin: 0 0 0.8em 0;
+}
+
+.book a {
+  font-weight: normal;
+  color: var(--white);
+  background-color: var(--blue);
+  padding: .5em;
+  border-radius: var(--border-radius);
+  margin-bottom: 1em;
+  position: absolute;
+  bottom: 0;
+  transition: .5s;
+}
+
+.book a:hover {
+  text-decoration: none;
+  background-color: #34495e;
+}
+
+/* Keyframe animations */
 @keyframes breathing {
   0% {transform: scale(0.98);}
   25% {transform: scale(1);}
