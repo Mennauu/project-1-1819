@@ -8,7 +8,7 @@ export const getObaData = async () => {
     // Set the API key
     const api = new API({ key: "1e19898c87464e239192c8bfe422f280" })
     // Search query endpoint
-    const iterator = await api.createIterator("search/muziek&facet=Type(cd)&facet=Type(audiobook){100}")
+    const iterator = await api.createIterator("search/muziek&facet=Type(cd)&facet=Type(audiobook){60}")
 
     for await (const response of iterator) {
       console.log(response)
@@ -17,7 +17,7 @@ export const getObaData = async () => {
 
       for (const object of filteredData) {
         // Remove all objects with null's
-        if (object.amount !== null && object.availableAmount !== null && object.author !== null && object.characteristic !== null && object.cover_image !== null && object.description !== null && object.isbn !== null && object.pica !== null && object.language !== null && object.publication_year !== null && object.subject !== null && object.title !== null)
+        if (object.amount !== null && object.availableAmount !== null && object.author !== null && object.characteristic !== null && object.cover_image !== null && object.description !== null && object.language !== null && object.publication_year !== null && object.subject !== null && object.title !== null)
           /* Cache data */
           addObject(object)
       }
