@@ -79,7 +79,7 @@ export const renderBook = (data, name) => {
     `<img src="${data.cover_image}" alt="${data.title}">
      <h2>${data.title}</h2>
      <p>${data.description}</p>
-     <small><strong>${data.author}</strong> &#128900; ${data.publication_year} &#128900; ${data.language} &#128900; ${data.characteristic}</small>
+     <small><strong>${data.author}</strong> • ${data.publication_year} • ${data.language} • ${data.characteristic}</small>
      <a href="https://iguana.oba.nl/iguana/www.main.cls?sUrl=search&theme=OBA#app=Reserve&ppn=${data.pica}" target="_blank" rel="noopener">Er is/zijn in totaal <strong>${data.amount} exemplaar</strong> waarvan er <strong class="${color}">${data.availableAmount} beschikbaar</strong> is/zijn</a>`
 
   /* Insert markup to HTML section */
