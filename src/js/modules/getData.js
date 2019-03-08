@@ -18,7 +18,7 @@ export const getObaData = async () => {
 
       for (const object of filteredData) {
         // Remove all objects with null's
-        if (object.amount !== null && object.availableAmount !== null && object.author !== null && object.characteristic !== null && object.cover_image !== null && object.description !== null && object.pica !== null && object.language !== null && object.publication_year !== null && object.subject !== null && object.title !== null)
+        if (object.amount !== null && object.availableAmount !== null && object.author !== null && object.characteristic !== null && object.cover_image !== null && object.description !== null && object.isbn !== null && object.pica !== null && object.language !== null && object.publication_year !== null && object.subject !== null && object.title !== null)
           /* Cache data */
           addObject(object)
       }

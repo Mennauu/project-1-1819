@@ -15,6 +15,7 @@ export const filterData = ({ authors, coverimages, description, identifiers, lan
     characteristic: description && description['physical-description'] && description['physical-description']._text ? description['physical-description']._text : null,
     cover_image: coverimages && coverimages.coverimage && coverimages.coverimage[1] && coverimages.coverimage[1]._text ? coverimages.coverimage[1]._text : null,
     description: summaries && summaries.summary && summaries.summary._text ? summaries.summary._text : null,
+    isbn: identifiers && identifiers['isbn-id'] && identifiers['isbn-id']._text ? identifiers['isbn-id']._text : null,
     pica: identifiers && identifiers['ppn-id'] && identifiers['ppn-id']._text ? identifiers['ppn-id']._text : null,
     language: languages && languages.language && languages.language._text ? languages.language._text : null,
     publication_year: publication && publication.year && publication.year._text ? publication.year._text : null,
