@@ -8,7 +8,7 @@ export const getObaData = async () => {
     // Set the API key
     const api = new API({ key: "1e19898c87464e239192c8bfe422f280" })
     // Search query endpoint
-    const iterator = await api.createIterator("search/muziek&facet=Type(cd)&facet=Type(audiobook){20}")
+    const iterator = await api.createIterator("search/muziek&facet=Type(cd)&facet=Type(audiobook){40}")
 
     for await (const response of iterator) {
       console.log(response)
