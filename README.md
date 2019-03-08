@@ -13,7 +13,7 @@
 
 <br>
 
-![preview](preview.png)
+![preview](assets/preview.png)
 
 <br>
 
@@ -74,8 +74,8 @@ You need a public and secret key to connect with the OBA API. There isn't a fixe
 The data is retrieved using the [OBA-wrapper created by Wouter](https://github.com/maanlamp/OBA-wrapper). The only thing I have to do is set the API key, and the search query. Because I only want audiobooks I add two facets, cd and audiobook.
 
 ```JavaScript
-    const api = new API({ key: "1e19898c87464e239192c8bfe422f280" })
-    const iterator = await api.createIterator("search/muziek&facet=Type(cd)&facet=Type(audiobook){60}")
+const api = new API({ key: "1e19898c87464e239192c8bfe422f280" })
+const iterator = await api.createIterator("search/muziek&facet=Type(cd)&facet=Type(audiobook){60}")
 ```
 
 ### Cache
