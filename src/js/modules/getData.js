@@ -8,13 +8,12 @@ export const getObaData = async () => {
     // Set the API key
     const api = new API({ key: "1e19898c87464e239192c8bfe422f280" })
     // Search query endpoint
-    const iterator = await api.createIterator("search/muziek&facet=Type(cd)&facet=Type(audiobook){60}")
+    const iterator = await api.createIterator("search/muziek&facet=Type(cd)&facet=Type(audiobook){100}")
 
     for await (const response of iterator) {
       console.log(response)
       // Filter all responses
       const filteredData = filterAllData(response)
-
 
       for (const object of filteredData) {
         // Remove all objects with null's

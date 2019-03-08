@@ -280,7 +280,6 @@ section:first-of-type,
 .list {display: block!important;}
 .list-item {
   background-color: var(--light-gray);
-  border-radius: var(--border-radius);
   padding: 1em;
   display: block!important;
   overflow: auto;
@@ -317,7 +316,6 @@ section:first-of-type,
 
 .wikipedia div {
   background-color: var(--light-gray);
-  border-radius: var(--border-radius);
   padding: 1em;
   margin-top: 2em;
   overflow: auto;
